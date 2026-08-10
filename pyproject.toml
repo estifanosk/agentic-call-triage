@@ -1,0 +1,32 @@
+[project]
+name = "agentic-call-triage"
+version = "0.1.0"
+description = "Multi-agent LangGraph triage for contact-center call transcripts"
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph>=0.2.60",
+    "langchain-core>=0.3",
+    "langchain-ollama>=0.2",
+    "langgraph-checkpoint-sqlite>=2.0",
+    "pydantic>=2",
+    "httpx>=0.27",
+    "rich>=13",
+]
+
+[project.optional-dependencies]
+vllm = ["langchain-openai>=0.2"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+triage = "triage.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/triage"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

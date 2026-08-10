@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+triage.db
+.DS_Store
+
+# Personal interview notes — never commit
+interview-prep.html
