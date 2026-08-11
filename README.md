@@ -28,6 +28,10 @@ flowchart LR
     file --> END2([case created])
 ```
 
+[**Architecture →**](docs/ARCHITECTURE.md) — six diagrams covering the graph topology, the
+sequence of a run, state reduction, the durable human gate, the trust boundary, and what
+this looks like deployed.
+
 ## Running it
 
 ```bash
